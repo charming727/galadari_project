@@ -1,0 +1,48 @@
+# ---- Secrets: never commit these ----------------------------------------
+.env
+.env.*
+.env.local
+.env.*.local
+# ...but always keep the templates, which carry key NAMES only, no values.
+!*.example
+
+# ---- Python -------------------------------------------------------------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ---- Node / Next.js (web/) ----------------------------------------------
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# ---- Generated vector index ---------------------------------------------
+# Rebuilt automatically from data/menu.csv on first run (menu_rag.py).
+chroma-storage/
+chroma/
+*.chroma
+index-storage/
+storage/
+
+# ---- Logs and temp ------------------------------------------------------
+logs/
+*.log
+*.pid
+tmp/
+.cache/
+
+# ---- Editor / OS --------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/

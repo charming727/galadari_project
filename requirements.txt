@@ -1,0 +1,22 @@
+# Pinned to the versions the live demo actually runs (Python 3.12.3).
+# Only direct imports are listed; pip resolves the rest.
+
+# --- LiveKit agent framework -------------------------------------------
+# Speech-to-speech only: the OpenAI Realtime model does its own turn
+# detection and transcription, so no silero / turn-detector / deepgram
+# plugin is installed or imported (see the comment in agent.py).
+livekit-agents==1.5.17
+livekit-plugins-openai==1.5.17
+
+# Imported directly by agent.py for InputAudioTranscription.
+openai==2.41.1
+
+# --- Menu RAG: Chroma-backed vector index over data/menu.csv -----------
+llama-index==0.14.22
+llama-index-vector-stores-chroma==0.5.5
+llama-index-embeddings-openai==0.6.0
+chromadb==1.5.9
+
+# --- Config + schema ---------------------------------------------------
+python-dotenv==1.2.2
+pydantic==2.13.4
